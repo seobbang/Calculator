@@ -1,0 +1,117 @@
+.hidden {
+    display: none;
+}
+
+.box {
+    width : 340px;
+    height: 520px;
+    border: 1px solid black;
+    position:absolute;
+    /*position : html에서 요소가 배치되는 방식
+    static : 기본값. 원래 있어야 하는 위치. 순서대로 배치되므로 top,left,bottom,right 무시됨
+    relative : 기본값, 원래 위치를 기준으로 상대적 배치. 원래 위치의 상하좌우로 (top, left, botto, right) 배치 가능
+    absolute : 배치 기준을 자신이 아닌 position 속성이 static이 아닌 첫 번째 상위 요소로 함. 해당 요소 상위에 position 속성이 static이 아닌 요소가 없다면 최상위 요소인 <body> 요소가 배치 기준이 됨
+    sticky : 스크롤링될 때 효과가 나타남
+    fixed : 항상 고정된 위치에 배치. 배치 기준은 브라우저 전체화면. 상하좌우 속성은 각 브라우저 상단 좌측 하단 우측으로부터 해당 요소가 얼마나 떨어져있는지 결정.*/
+    top:0; left:0; bottom:0; right: 0;    /*모든 방향에서 당겨 꽉 차게 됌*/
+    margin: auto;
+    background-color:	#A0A0C8;
+    box-shadow: 1px 1px 5px 1px #28292b;
+    padding:20px;
+    border-radius: 4px;
+}
+
+.ans-box {
+    border: 1px solid black;
+    height:120px;
+    margin-bottom: 20px;
+    background-color:#FFDC3C;
+    border-radius: 10px;
+    border:2px solid #3c3c3c;
+}
+
+.buttonContainer {
+    height: 350px;
+    border: 1px solid black;
+    padding: 15px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap:6px;
+    background-color: #a0a0a0;
+    border-radius: 10px;
+}
+
+input {
+    background: url("backspace.png") no-repeat;
+    cursor: pointer;
+    background-position: center;
+    background-position-y: 48%;
+    background-color: 	#FFE6EB	;
+    background-size: 18px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px black;
+
+    transition-duration: 0.3s; /*클릭 시 동적으로 0.3초동안 구현되도록*/
+
+}
+
+input:active {
+    margin-left: 0.3px;
+    margin-top: 0.3px; /*눌렀을 시 살짝 이동하는 효과*/
+
+}
+
+button {
+    background-color: 	#FFE6EB;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 0.5px black;
+
+    transition-duration: 0.3s; /*클릭 시 동적으로 0.3초동안 구현되도록*/
+
+    font-size: 18px;
+}
+
+button:active {
+    margin-left: 0.3px;
+    margin-top: 0.3px; /*눌렀을 시 살짝 이동하는 효과*/
+
+}
+
+#AC {
+    font-size: 17px;
+}
+
+.opButton {
+    font-size: 20px;
+}
+
+#dot {
+    font-size: 25px;
+}
+
+#pri-ans{
+    margin-right:3px;
+    margin-left: 3px;
+    text-align: right;
+    margin-top: 7px;
+    height : 35px;
+    font-size:20px;
+    overflow: auto;
+    color : #646464;
+}
+#ans {
+    margin-right:3px;
+    margin-left: 3px;
+    text-align: right;
+    height : 60px;
+    border-top: 2px;
+    font-size: 35px;
+    word-break:break-all;
+    overflow: auto;
+}
+
+.endButton {
+    background-color: #FFC8CD;
+}
